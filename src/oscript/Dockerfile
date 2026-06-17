@@ -48,6 +48,7 @@ RUN wget https://github.com/oscript-library/ovm/releases/download/v${OVM_VERSION
   && chmod +x /usr/local/bin/ovm \
   && ovm install ${OSCRIPT_VERSION} \
   && ovm use ${OSCRIPT_VERSION}
+  && opm i opm
 
 ENV OSCRIPTBIN=/root/.local/share/ovm/current/bin
 ENV PATH="$OSCRIPTBIN:$PATH"
